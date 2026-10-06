@@ -1,3 +1,5 @@
+<p align="center"><img src="logo.svg" alt="CRUSH — from-scratch compression" width="440"></p>
+
 # CRUSH
 
 A from-scratch lossless compressor and archiver. **No zlib, no LZMA, no libraries

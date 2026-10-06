@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="160" viewBox="0 0 560 160" role="img" aria-label="CRUSH">
+  <defs>
+    <linearGradient id="lbar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7CE3AD"/>
+      <stop offset="1" stop-color="#3BA876"/>
+    </linearGradient>
+  </defs>
+
+  <!-- icon mark -->
+  <g transform="translate(16,16)">
+    <rect x="0" y="0" width="128" height="128" rx="30" fill="#0E1512" stroke="#243029" stroke-width="2"/>
+    <polyline points="42,39 64,56 86,39" fill="none" stroke="#7CE3AD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="30" y="61" width="68" height="8" rx="4" fill="url(#lbar)"/>
+    <rect x="39" y="73" width="50" height="8" rx="4" fill="url(#lbar)" opacity="0.9"/>
+    <rect x="48" y="85" width="32" height="8" rx="4" fill="url(#lbar)" opacity="0.8"/>
+    <polyline points="42,105 64,88 86,105" fill="none" stroke="#7CE3AD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- wordmark -->
+  <text x="172" y="98" font-family="ui-monospace,'Cascadia Code',Consolas,'SF Mono',monospace"
+        font-size="74" font-weight="800" letter-spacing="6" fill="#E9F0EB">CRUSH</text>
+  <text x="174" y="128" font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif"
+        font-size="15.5" letter-spacing="1.5" fill="#4FD08A">from-scratch compression</text>
+</svg>
