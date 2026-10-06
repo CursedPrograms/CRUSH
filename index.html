@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CRUSH — a from-scratch compressor</title>
+<meta name="description" content="CRUSH is a lossless compressor and archiver written from scratch — a binary range coder with context mixing and a match model. No zlib, no LZMA. It beats gzip and bzip2 and comes within 1% of 7-zip's LZMA.">
+<meta name="color-scheme" content="dark">
+<meta property="og:title" content="CRUSH — a from-scratch compressor">
+<meta property="og:description" content="Own compression math: range coder + context mixing + match model. Beats gzip/bzip2, within 1% of LZMA.">
+<style>
+  :root{
+    --bg:#0A0E0C; --panel:#111714; --border:#243029; --divider:#19201C;
+    --text:#E9F0EB; --text-sec:#9DABA2; --text-dim:#5E6B62;
+    --accent:#4FD08A; --accent-hover:#7CE3AD; --accent2:#5B8DEF;
+    --mono:ui-monospace,"Cascadia Code",Consolas,"SF Mono",Menlo,monospace;
+    --sans:"Segoe UI",system-ui,-apple-system,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.6}
+  .wrap{max-width:880px;margin:0 auto;padding:0 20px}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{color:var(--accent-hover)}
+  header{text-align:center;padding:78px 0 40px;position:relative;overflow:hidden}
+  header::before{content:"";position:absolute;inset:-40% 0 auto 0;height:440px;z-index:0;
+    background:radial-gradient(60% 60% at 50% 0,rgba(79,208,138,.14),transparent 70%)}
+  header .wrap{position:relative;z-index:1}
+  .eyebrow{font:600 12px var(--mono);letter-spacing:.3em;text-transform:uppercase;color:var(--accent)}
+  h1{font:800 clamp(56px,13vw,112px)/1 var(--mono);letter-spacing:.14em;margin:10px 0 4px}
+  .tagline{font:500 clamp(15px,3.3vw,20px) var(--sans);color:var(--text-sec)}
+  .lede{max-width:620px;margin:18px auto 0;color:var(--text-sec)}
+  .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+  .btn{display:inline-block;padding:11px 22px;border:1px solid var(--border);border-radius:10px;font:600 14px var(--sans);color:var(--text)}
+  .btn:hover{border-color:var(--accent);color:var(--accent)}
+  .btn.primary{background:rgba(79,208,138,.12);border-color:var(--accent);color:var(--accent)}
+  .tags{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:24px}
+  .tag{font:12px var(--mono);color:var(--text-sec);background:var(--panel);border:1px solid var(--border);border-radius:999px;padding:5px 12px}
+  section{padding:30px 0;border-top:1px solid var(--divider)}
+  h2{font:700 13px var(--mono);letter-spacing:.26em;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
+  .chart{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:16px;overflow:auto}
+  .chart img{width:100%;height:auto;display:block}
+  table{width:100%;border-collapse:collapse;margin-top:14px;font-size:14px}
+  th,td{text-align:right;padding:8px 10px;border-bottom:1px solid var(--divider)}
+  th:first-child,td:first-child{text-align:left}
+  tr.ours td{color:var(--accent);font-weight:700}
+  thead th{color:var(--text-dim);font:11px var(--mono);letter-spacing:.1em;text-transform:uppercase}
+  .grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:4px}
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:16px 18px}
+  .card h3{font:600 15px var(--sans);margin-bottom:6px}
+  .card p{color:var(--text-sec);font-size:14px}
+  .card .n{font:700 12px var(--mono);color:var(--accent2)}
+  pre{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:14px 16px;overflow:auto;font:13px/1.6 var(--mono);color:#b9c8bf;margin-top:8px}
+  pre .c{color:var(--text-dim)}
+  footer{padding:36px 0 56px;text-align:center;color:var(--text-dim);font:12px var(--mono);border-top:1px solid var(--divider)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">from-scratch compression</div>
+    <h1>CRUSH</h1>
+    <p class="tagline">A lossless compressor &amp; archiver — and the math is ours.</p>
+    <p class="lede">No zlib, no LZMA, no libraries. A binary range coder driving a context-mixing model with a match model — in a few hundred lines. It beats gzip and bzip2, and comes within 1% of 7-zip's LZMA.</p>
+    <div class="cta">
+      <a class="btn primary" href="https://github.com/CursedPrograms/CRUSH">View on GitHub</a>
+      <a class="btn" href="dist/crush.exe">Download (Windows x64)</a>
+      <a class="btn" href="#how">How it works</a>
+    </div>
+    <div class="tags">
+      <span class="tag">range coder</span><span class="tag">context mixing</span><span class="tag">match model</span>
+      <span class="tag">C++ &amp; Python</span><span class="tag">CRC32 verified</span><span class="tag">zero deps</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="benchmark">
+    <h2>Benchmark</h2>
+    <div class="chart"><img src="docs/benchmark.svg" alt="CRUSH vs gzip, bzip2 and xz/LZMA"></div>
+    <table>
+      <thead><tr><th>tool</th><th>compressed</th><th>ratio</th><th>time</th></tr></thead>
+      <tbody>
+        <tr><td>xz -9 (LZMA / 7-zip)</td><td>206,960</td><td>19.7%</td><td>0.51s</td></tr>
+        <tr class="ours"><td>CRUSH v2 + match (ours)</td><td>213,653</td><td>20.4%</td><td>1.49s</td></tr>
+        <tr><td>bzip2 -9 (BWT)</td><td>222,999</td><td>21.3%</td><td>0.19s</td></tr>
+        <tr><td>gzip -9 (DEFLATE)</td><td>249,040</td><td>23.8%</td><td>0.16s</td></tr>
+      </tbody>
+    </table>
+    <p style="color:var(--text-dim);font-size:13px;margin-top:10px">1 MB of real mixed code + prose. Lower is better. CRUSH trades speed for ratio.</p>
+  </section>
+
+  <section id="how">
+    <h2>How it works</h2>
+    <div class="grid">
+      <div class="card"><span class="n">1</span><h3>Range coder</h3><p>Arithmetic coding over a shrinking 32-bit interval. A bit the model is 99% sure of costs ~0.014 bits, not a whole one — close to the true entropy.</p></div>
+      <div class="card"><span class="n">2</span><h3>Context mixing</h3><p>Several models (contexts of the last 1–6 bytes) predict each bit; an adaptive mixer blends them in the logistic domain, learning who to trust.</p></div>
+      <div class="card"><span class="n">3</span><h3>Match model</h3><p>A hash points back to where the last 6 bytes last appeared, predicting the next bit from the repeat — the dictionary power LZ tools get, fed into the mixer.</p></div>
+    </div>
+  </section>
+
+  <section id="use">
+    <h2>Use it</h2>
+    <pre><span class="c">:: create, list, test, extract</span>
+crush a backup.crush notes.txt report.pdf src\
+crush l backup.crush
+crush t backup.crush
+crush x backup.crush out\
+
+<span class="c">:: build from source (standalone, no DLLs)</span>
+g++ -O2 -std=c++17 -static -o crush.exe crush.cpp</pre>
+  </section>
+</main>
+
+<footer>CRUSH · a from-scratch compressor · range coder + context mixing + match model</footer>
+
+</body>
+</html>

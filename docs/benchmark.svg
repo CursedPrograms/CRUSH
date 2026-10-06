@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="320" viewBox="0 0 760 320" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+  <text x="236" y="34" text-anchor="end" font-size="17" font-weight="700" fill="#8b949e">CRUSH vs popular compressors</text>
+  <text x="236" y="56" text-anchor="end" font-size="12.5" fill="#768390">1 MB of real mixed code + prose — compressed size as % of original (shorter = better)</text>
+  <line x1="250" y1="84" x2="250" y2="276" stroke="#8b949e" stroke-width="1" opacity="0.4"/>
+  <text x="236" y="114" text-anchor="end" font-size="14" font-weight="500" fill="#8b949e">xz -9  (LZMA / 7-zip)</text>
+  <rect x="250" y="98" width="321.9" height="24" rx="5" fill="#5B8DEF"/>
+  <text x="581.9" y="114" font-size="13" font-weight="500" fill="#8b949e">19.7%  ·  0.51s</text>
+  <text x="236" y="160" text-anchor="end" font-size="14" font-weight="700" fill="#8b949e">CRUSH v2 +match  (ours)</text>
+  <rect x="250" y="144" width="333.3" height="24" rx="5" fill="#F2A33A"/>
+  <text x="593.3" y="160" font-size="13" font-weight="700" fill="#8b949e">20.4%  ·  1.49s</text>
+  <text x="236" y="206" text-anchor="end" font-size="14" font-weight="500" fill="#8b949e">bzip2 -9  (BWT)</text>
+  <rect x="250" y="190" width="348.0" height="24" rx="5" fill="#5B8DEF"/>
+  <text x="608.0" y="206" font-size="13" font-weight="500" fill="#8b949e">21.3%  ·  0.19s</text>
+  <text x="236" y="252" text-anchor="end" font-size="14" font-weight="500" fill="#8b949e">gzip -9  (DEFLATE)</text>
+  <rect x="250" y="236" width="388.9" height="24" rx="5" fill="#5B8DEF"/>
+  <text x="648.9" y="252" font-size="13" font-weight="500" fill="#8b949e">23.8%  ·  0.16s</text>
+  <text x="250" y="306" font-size="11.5" fill="#768390">CRUSH is a from-scratch context-mixing coder — no LZMA, no zlib. It already beats gzip and bzip2 and trails LZMA by &lt;1%.</text>
+</svg>

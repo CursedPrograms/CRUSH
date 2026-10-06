@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.crush
+/crush.exe
+*.o
+corpus.dat
+t_in/
+t_out/
+edge/
+edge_out/
+rt/
+!dist/
