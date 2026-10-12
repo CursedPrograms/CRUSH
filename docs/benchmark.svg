@@ -2,7 +2,7 @@
   <text x="236" y="34" text-anchor="end" font-size="17" font-weight="700" fill="#8b949e">CRUSH vs popular compressors</text>
   <text x="236" y="56" text-anchor="end" font-size="12.5" fill="#768390">863 KB of C++ source + English prose — compressed size as % of original (shorter = better)</text>
   <line x1="250" y1="84" x2="250" y2="276" stroke="#8b949e" stroke-width="1" opacity="0.4"/>
-  <text x="236" y="114" text-anchor="end" font-size="14" font-weight="700" fill="#8b949e">CRUSH v3  (ours)</text>
+  <text x="236" y="114" text-anchor="end" font-size="14" font-weight="700" fill="#8b949e">CRUSH v3</text>
   <rect x="250" y="98" width="262.2" height="24" rx="5" fill="#F2A33A"/>
   <text x="522.2" y="114" font-size="13" font-weight="700" fill="#8b949e">15.1%  ·  0.69s</text>
   <text x="236" y="160" text-anchor="end" font-size="14" font-weight="500" fill="#8b949e">xz -9  (LZMA / 7-zip)</text>

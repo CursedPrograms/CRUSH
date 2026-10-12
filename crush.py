@@ -28,7 +28,7 @@ MAGIC = b"CRUSH\x01"
 METHOD_RAW = 0
 METHOD_CRUSH = 1
 
-# ── CRC32 (IEEE, our own table — no zlib) ────────────────────────────────────
+# ── CRC32 (IEEE, its own table — no zlib) ────────────────────────────────────
 _CRC_TABLE = []
 for _n in range(256):
     _c = _n

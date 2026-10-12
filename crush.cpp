@@ -1,6 +1,6 @@
 // CRUSH — a from-scratch compressor/archiver in C++.
 //
-// The compression is ours: a binary range coder (arithmetic coding) driven by a context-mixing
+// The compression is written from scratch: a binary range coder (arithmetic coding) driven by a context-mixing
 // model with a match model. No zlib, no libraries — just the standard library and file I/O.
 //
 //   v3 (written by this version): adaptive-rate counters, order 0-6 contexts, a match model,
@@ -378,7 +378,7 @@ static Bytes decompress_with(const Bytes& comp, uint64_t out_size) {
     return out;
 }
 
-// ── CRC32 (IEEE, our own table — no zlib) ────────────────────────────────────
+// ── CRC32 (IEEE, its own table — no zlib) ────────────────────────────────────
 static uint32_t crc_table[256];
 static void crc_init() {
     for (uint32_t n = 0; n < 256; n++) {

@@ -32,7 +32,7 @@
   table{width:100%;border-collapse:collapse;margin-top:14px;font-size:14px}
   th,td{text-align:right;padding:8px 10px;border-bottom:1px solid var(--divider)}
   th:first-child,td:first-child{text-align:left}
-  tr.ours td{color:var(--accent);font-weight:700}
+  tr.crush td{color:var(--accent);font-weight:700}
   thead th{color:var(--text-dim);font:11px var(--mono);letter-spacing:.1em;text-transform:uppercase}
   .grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:4px}
   .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:16px 18px}

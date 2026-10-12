@@ -7,7 +7,7 @@
 [Farica☆Kimora](https://github.com/Farica-Kimora) © Cursed Entertainment
 
 A from-scratch lossless compressor and archiver. **No zlib, no LZMA, no libraries
-— the compression math is ours.** CRUSH is the WinRAR / 7-zip *shape* (a container
+— every part of the compression is written from scratch.** CRUSH is the WinRAR / 7-zip *shape* (a container
 that holds many files, each verified with a CRC32) wrapped around a compression
 core written from the ground up: a binary range coder driving a **context-mixing**
 model with a **match model**.
@@ -109,7 +109,7 @@ per file:
   uint16  name length
   bytes   name (utf-8, "/" between folders)
   uint64  original size
-  uint32  CRC32 of the original      (our own CRC table — no zlib)
+  uint32  CRC32 of the original      (its own CRC table — no zlib)
   uint64  stored size
   bytes   stored data
 ```
@@ -148,5 +148,3 @@ extraction refuses names that would land outside the destination (`..`, absolute
         alt="CursedEntertainment Logo" style="width:250px;">
 </a>
 </div>
-
-
