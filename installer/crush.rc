@@ -1,0 +1,30 @@
+// Icon and version details for crush.exe (MSVC: rc installer\crush.rc, then link crush.res)
+#include <winver.h>
+
+1 ICON "crush.ico"
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 3,0,0,0
+ PRODUCTVERSION 3,0,0,0
+ FILEOS VOS_NT_WINDOWS32
+ FILETYPE VFT_APP
+BEGIN
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040904B0"
+    BEGIN
+      VALUE "CompanyName", "Cursed Entertainment"
+      VALUE "FileDescription", "CRUSH - from-scratch compressor"
+      VALUE "FileVersion", "3.0.0"
+      VALUE "InternalName", "crush"
+      VALUE "LegalCopyright", "Farica Kimora, Cursed Entertainment (MIT)"
+      VALUE "OriginalFilename", "crush.exe"
+      VALUE "ProductName", "CRUSH"
+      VALUE "ProductVersion", "3.0.0"
+    END
+  END
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x409, 1200
+  END
+END

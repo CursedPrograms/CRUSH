@@ -9,12 +9,12 @@ import os
 
 # (label, compressed ratio % of original, time seconds, is_ours)
 DATA = [
-    ("xz -9  (LZMA / 7-zip)", 19.7, 0.51, False),
-    ("CRUSH v2 +match  (ours)", 20.4, 1.49, True),
-    ("bzip2 -9  (BWT)", 21.3, 0.19, False),
-    ("gzip -9  (DEFLATE)", 23.8, 0.16, False),
+    ("CRUSH v3  (ours)", 15.1, 0.69, True),
+    ("xz -9  (LZMA / 7-zip)", 17.7, 0.26, False),
+    ("bzip2 -9  (BWT)", 18.3, 0.13, False),
+    ("gzip -9  (DEFLATE)", 22.4, 0.10, False),
 ]
-CORPUS = "1 MB of real mixed code + prose"
+CORPUS = "863 KB of C++ source + English prose"
 
 W, ROW_H, TOP, LEFT, BARMAX = 760, 46, 92, 250, 420
 H = TOP + ROW_H * len(DATA) + 44
