@@ -22,7 +22,7 @@ a CSV file 34% smaller. Executables are the one place LZMA still edges ahead (by
 
 | tool | compressed | ratio | time |
 |---|---:|---:|---:|
-| **CRUSH v3  (ours)** | **130,415** | **15.1%** | 0.69s |
+| **CRUSH v3** | **130,415** | **15.1%** | 0.69s |
 | xz -9  (LZMA / 7-zip) | 152,936 | 17.7% | 0.26s |
 | bzip2 -9  (BWT) | 158,166 | 18.3% | 0.13s |
 | gzip -9  (DEFLATE) | 193,136 | 22.4% | 0.10s |
