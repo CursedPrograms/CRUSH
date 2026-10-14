@@ -10,3 +10,8 @@ edge/
 edge_out/
 rt/
 !dist/
+
+# release build output (crush.exe itself stays in dist/)
+build/
+dist/*.zip
+dist/*-setup.exe
