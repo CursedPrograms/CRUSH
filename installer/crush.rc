@@ -4,8 +4,8 @@
 1 ICON "crush.ico"
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 3,0,0,0
- PRODUCTVERSION 3,0,0,0
+ FILEVERSION 3,0,1,0
+ PRODUCTVERSION 3,0,1,0
  FILEOS VOS_NT_WINDOWS32
  FILETYPE VFT_APP
 BEGIN
@@ -15,12 +15,12 @@ BEGIN
     BEGIN
       VALUE "CompanyName", "Cursed Entertainment"
       VALUE "FileDescription", "CRUSH - from-scratch compressor"
-      VALUE "FileVersion", "3.0.0"
+      VALUE "FileVersion", "3.0.1"
       VALUE "InternalName", "crush"
       VALUE "LegalCopyright", "Farica Kimora, Cursed Entertainment (MIT)"
       VALUE "OriginalFilename", "crush.exe"
       VALUE "ProductName", "CRUSH"
-      VALUE "ProductVersion", "3.0.0"
+      VALUE "ProductVersion", "3.0.1"
     END
   END
   BLOCK "VarFileInfo"

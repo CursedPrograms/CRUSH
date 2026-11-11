@@ -1,8 +1,8 @@
-/* CRUSH - site styles */
+/* CRUSH - site styles: Atelier's colours (greys + the Cursed pink); solid colours only */
   :root{
-    --bg:#0A0E0C; --panel:#111714; --border:#243029; --divider:#19201C;
-    --text:#E9F0EB; --text-sec:#9DABA2; --text-dim:#5E6B62;
-    --accent:#4FD08A; --accent-hover:#7CE3AD; --accent2:#5B8DEF;
+    --bg:#1a1a1a; --panel:#242424; --border:#3a3a3a; --divider:#2e2e2e;
+    --text:#e6e6e6; --text-sec:#9a9a9a; --text-dim:#6e6e6e;
+    --accent:#e0408a; --accent-hover:#f29cc0; --accent2:#c2186b;
     --mono:ui-monospace,"Cascadia Code",Consolas,"SF Mono",Menlo,monospace;
     --sans:"Segoe UI",system-ui,-apple-system,sans-serif;
   }
@@ -12,8 +12,6 @@
   a{color:var(--accent);text-decoration:none}
   a:hover{color:var(--accent-hover)}
   header{text-align:center;padding:78px 0 40px;position:relative;overflow:hidden}
-  header::before{content:"";position:absolute;inset:-40% 0 auto 0;height:440px;z-index:0;
-    background:radial-gradient(60% 60% at 50% 0,rgba(79,208,138,.14),transparent 70%)}
   header .wrap{position:relative;z-index:1}
   .eyebrow{font:600 12px var(--mono);letter-spacing:.3em;text-transform:uppercase;color:var(--accent)}
   h1{font:800 clamp(56px,13vw,112px)/1 var(--mono);letter-spacing:.14em;margin:10px 0 4px}
@@ -22,7 +20,7 @@
   .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:26px}
   .btn{display:inline-block;padding:11px 22px;border:1px solid var(--border);border-radius:10px;font:600 14px var(--sans);color:var(--text)}
   .btn:hover{border-color:var(--accent);color:var(--accent)}
-  .btn.primary{background:rgba(79,208,138,.12);border-color:var(--accent);color:var(--accent)}
+  .btn.primary{background:#3a202e;border-color:var(--accent);color:var(--accent)}
   .tags{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:24px}
   .tag{font:12px var(--mono);color:var(--text-sec);background:var(--panel);border:1px solid var(--border);border-radius:999px;padding:5px 12px}
   section{padding:30px 0;border-top:1px solid var(--divider)}
@@ -39,7 +37,7 @@
   .card h3{font:600 15px var(--sans);margin-bottom:6px}
   .card p{color:var(--text-sec);font-size:14px}
   .card .n{font:700 12px var(--mono);color:var(--accent2)}
-  pre{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:14px 16px;overflow:auto;font:13px/1.6 var(--mono);color:#b9c8bf;margin-top:8px}
+  pre{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:14px 16px;overflow:auto;font:13px/1.6 var(--mono);color:#d6d6d6;margin-top:8px}
   pre .c{color:var(--text-dim)}
   footer{padding:36px 0 56px;text-align:center;color:var(--text-dim);font:12px var(--mono);border-top:1px solid var(--divider)}
 

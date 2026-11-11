@@ -20,8 +20,8 @@ W, ROW_H, TOP, LEFT, BARMAX = 760, 46, 92, 250, 420
 H = TOP + ROW_H * len(DATA) + 44
 scale_max = max(d[1] for d in DATA) * 1.08
 
-HIGHLIGHT = "#F2A33A"       # amber — CRUSH's bar
-OTHER = "#5B8DEF"      # blue — the others
+HIGHLIGHT = "#e0408a"       # the Cursed pink: CRUSH's bar (Atelier's colours)
+OTHER = "#6a6a6a"      # grey: the others
 AXIS = "#8b949e"       # grey that reads on white and on dark
 TITLE = "#768390"
 

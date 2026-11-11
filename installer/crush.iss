@@ -6,7 +6,7 @@
 ; Installs for everyone (admin) or just you, your choice; uninstalls cleanly, PATH included.
 
 #define AppName "CRUSH"
-#define AppVersion "3.0.0"
+#define AppVersion "3.0.1"
 #define AppPublisher "Cursed Entertainment"
 #define AppURL "https://cursedprograms.github.io/CRUSH/"
 

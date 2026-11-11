@@ -6,6 +6,8 @@
 
 [Farica☆Kimora](https://github.com/Farica-Kimora) © Cursed Entertainment
 
+Part of **[Atelier](https://github.com/CursedPrograms/Atelier)**, Cursed Entertainment's creative suite.
+
 A from-scratch lossless compressor and archiver. **No zlib, no LZMA, no libraries
 — every part of the compression is written from scratch.** CRUSH is the WinRAR / 7-zip *shape* (a container
 that holds many files, each verified with a CRC32) wrapped around a compression
@@ -33,11 +35,11 @@ harder than all of them. (`python make_chart.py` redraws the chart from these nu
 ## Install
 
 Download from [Releases](https://github.com/CursedPrograms/CRUSH/releases/latest):
-- **`CRUSH-3.0.0-setup.exe`** - installs `crush` on your PATH, gives `.crush` files an icon
+- **`CRUSH-3.0.1-setup.exe`** - installs `crush` on your PATH, gives `.crush` files an icon
   (double-click lists them), and adds Explorer right-click entries: **Add to CRUSH archive** on any
   file or folder, **Extract to folder** and **Test archive** on `.crush` files. Install for
   everyone or just you; uninstalls cleanly.
-- **`CRUSH-3.0.0-win64-portable.zip`** - just `crush.exe`, nothing installed.
+- **`CRUSH-3.0.1-win64-portable.zip`** - just `crush.exe`, nothing installed.
 
 ## Two implementations
 
