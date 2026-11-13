@@ -4,16 +4,16 @@
   <!-- icon mark -->
   <g transform="translate(16,16)">
     <rect x="0" y="0" width="128" height="128" rx="30" fill="#1a1a1a" stroke="#3a3a3a" stroke-width="2"/>
-    <polyline points="42,39 64,56 86,39" fill="none" stroke="#e0408a" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <polyline points="42,39 64,56 86,39" fill="none" stroke="#007bb7" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
     <rect x="30" y="61" width="68" height="8" rx="4" fill="#6a6a6a"/>
-    <rect x="39" y="73" width="50" height="8" rx="4" fill="#9e3a6a"/>
-    <rect x="48" y="85" width="32" height="8" rx="4" fill="#e0408a"/>
-    <polyline points="42,105 64,88 86,105" fill="none" stroke="#e0408a" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="39" y="73" width="50" height="8" rx="4" fill="#004067"/>
+    <rect x="48" y="85" width="32" height="8" rx="4" fill="#007bb7"/>
+    <polyline points="42,105 64,88 86,105" fill="none" stroke="#007bb7" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 
   <!-- wordmark: "CRU" in grey, "SH" in pink (both read on light and dark pages) -->
   <text x="172" y="98" font-family="ui-monospace,'Cascadia Code',Consolas,'SF Mono',monospace"
-        font-size="74" font-weight="800" letter-spacing="6" fill="#9a9a9a">CRU<tspan fill="#e0408a">SH</tspan></text>
+        font-size="74" font-weight="800" letter-spacing="6" fill="#9a9a9a">CRU<tspan fill="#007bb7">SH</tspan></text>
   <text x="174" y="128" font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif"
         font-size="15.5" letter-spacing="1.5" fill="#9a9a9a">from-scratch compression · part of Atelier</text>
 </svg>

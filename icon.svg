@@ -5,15 +5,15 @@
   <rect x="8" y="8" width="240" height="240" rx="56" fill="#1a1a1a" stroke="#3a3a3a" stroke-width="2"/>
 
   <!-- top plate pressing down -->
-  <polyline points="92,78 128,106 164,78" fill="none" stroke="#e0408a" stroke-width="13"
+  <polyline points="92,78 128,106 164,78" fill="none" stroke="#007bb7" stroke-width="13"
             stroke-linecap="round" stroke-linejoin="round"/>
 
   <!-- the data, squeezed into shorter and shorter bars: grey to pink -->
   <rect x="71"  y="116" width="114" height="13" rx="6.5" fill="#6a6a6a"/>
-  <rect x="86"  y="135" width="84"  height="13" rx="6.5" fill="#9e3a6a"/>
-  <rect x="101" y="154" width="54"  height="13" rx="6.5" fill="#e0408a"/>
+  <rect x="86"  y="135" width="84"  height="13" rx="6.5" fill="#004067"/>
+  <rect x="101" y="154" width="54"  height="13" rx="6.5" fill="#007bb7"/>
 
   <!-- bottom plate pressing up -->
-  <polyline points="92,189 128,161 164,189" fill="none" stroke="#e0408a" stroke-width="13"
+  <polyline points="92,189 128,161 164,189" fill="none" stroke="#007bb7" stroke-width="13"
             stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
