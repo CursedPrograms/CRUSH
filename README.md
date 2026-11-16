@@ -32,6 +32,15 @@ a CSV file 34% smaller. Executables are the one place LZMA still edges ahead (by
 Lower is better. CRUSH is a bit-at-a-time model, so it's slower than the LZ tools; it squeezes
 harder than all of them. (`python make_chart.py` redraws the chart from these numbers.)
 
+## Minimum requirements
+
+| | |
+| --- | --- |
+| **System** | Windows 10 or 11, 64-bit (the Python version runs anywhere with Python 3) |
+| **Processor** | any 64-bit processor |
+| **Memory** | 2 GB RAM, plus room for the biggest file you pack |
+| **Disk** | 1 MB |
+
 ## Install
 
 Download from [Releases](https://github.com/CursedPrograms/CRUSH/releases/latest):
