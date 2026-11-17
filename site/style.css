@@ -1,8 +1,8 @@
-/* CRUSH - site styles: Atelier's colours (greys + the Cursed pink); solid colours only */
+/* CRUSH - site styles: Atelier's colours (greys + the Atelier blue); solid colours only */
   :root{
     --bg:#1a1a1a; --panel:#242424; --border:#3a3a3a; --divider:#2e2e2e;
     --text:#e6e6e6; --text-sec:#9a9a9a; --text-dim:#6e6e6e;
-    --accent:#e0408a; --accent-hover:#f29cc0; --accent2:#c2186b;
+    --accent:#007bb7; --accent-hover:#5fb4e0; --accent2:#005c8a;
     --mono:ui-monospace,"Cascadia Code",Consolas,"SF Mono",Menlo,monospace;
     --sans:"Segoe UI",system-ui,-apple-system,sans-serif;
   }
